@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "access_key": {
+            "required": true,
+            "type": "string"
+        },
+        "tonce": {
+            "required": true,
+            "type": "integer"
+        },
+        "signature": {
+            "required": true,
+            "type": "string"
+        },
+        "currency": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

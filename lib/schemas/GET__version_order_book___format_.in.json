@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "market": {
+            "required": true,
+            "type": "string"
+        },
+        "asks_limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "bids_limit": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

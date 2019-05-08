@@ -1,0 +1,386 @@
+{
+    "title": "Yunbi",
+    "description": "Professional Cloud Trading Platform for Digital Assets",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/yunbi.com/v2/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://yunbi.com/api",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "GET__version_addresses__address___format_": {
+            "main": "./lib/actions/GET__version_addresses__address___format_.js",
+            "title": "Check Deposit Address",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_addresses__address___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_deposit___format_": {
+            "main": "./lib/actions/GET__version_deposit___format_.js",
+            "title": "Get details of specific deposit.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_deposit___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_deposit_address___format_": {
+            "main": "./lib/actions/GET__version_deposit_address___format_.js",
+            "title": "Where to deposit. The address field could be empty when a new address is generating (e.g. for bitcoin), you should try again later in that case.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_deposit_address___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_deposits___format_": {
+            "main": "./lib/actions/GET__version_deposits___format_.js",
+            "title": "Get your deposits history.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_deposits___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_depth___format_": {
+            "main": "./lib/actions/GET__version_depth___format_.js",
+            "title": "Get depth or specified market. Both asks and bids are sorted from highest price to lowest.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_depth___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_k___format_": {
+            "main": "./lib/actions/GET__version_k___format_.js",
+            "title": "Get OHLC(k line) of specific market.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_k___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_k_with_pending_trades___format_": {
+            "main": "./lib/actions/GET__version_k_with_pending_trades___format_.js",
+            "title": "Get K data with pending trades, which are the trades not included in K data yet, because there's delay between trade generated and processed by K data generator.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_k_with_pending_trades___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_markets___format_": {
+            "main": "./lib/actions/GET__version_markets___format_.js",
+            "title": "Get all available markets.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_markets___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_members_me___format_": {
+            "main": "./lib/actions/GET__version_members_me___format_.js",
+            "title": "Get your profile and accounts info.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_members_me___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_order___format_": {
+            "main": "./lib/actions/GET__version_order___format_.js",
+            "title": "Get information of specified order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_order___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "POST__version_order_delete___format_": {
+            "main": "./lib/actions/POST__version_order_delete___format_.js",
+            "title": "Cancel an order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/POST__version_order_delete___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_order_book___format_": {
+            "main": "./lib/actions/GET__version_order_book___format_.js",
+            "title": "Get the order book of specified market.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_order_book___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_orders___format_": {
+            "main": "./lib/actions/GET__version_orders___format_.js",
+            "title": "Get your orders, results is paginated.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_orders___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "POST__version_orders___format_": {
+            "main": "./lib/actions/POST__version_orders___format_.js",
+            "title": "Create a Sell/Buy order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/POST__version_orders___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "POST__version_orders_clear___format_": {
+            "main": "./lib/actions/POST__version_orders_clear___format_.js",
+            "title": "Cancel all my orders.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/POST__version_orders_clear___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "POST__version_orders_multi___format_": {
+            "main": "./lib/actions/POST__version_orders_multi___format_.js",
+            "title": "Create multiple sell/buy orders.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/POST__version_orders_multi___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_partners_orders__id_trades___format_": {
+            "main": "./lib/actions/GET__version_partners_orders__id_trades___format_.js",
+            "title": "GET__version_partners_orders__id_trades___format_",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_partners_orders__id_trades___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_tickers___format_": {
+            "main": "./lib/actions/GET__version_tickers___format_.js",
+            "title": "Get ticker of all markets.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_tickers___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_tickers__market___format_": {
+            "main": "./lib/actions/GET__version_tickers__market___format_.js",
+            "title": "Get ticker of specific market.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_tickers__market___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_timestamp___format_": {
+            "main": "./lib/actions/GET__version_timestamp___format_.js",
+            "title": "Get server current time, in seconds since Unix epoch.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_timestamp___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_trades___format_": {
+            "main": "./lib/actions/GET__version_trades___format_.js",
+            "title": "Get recent trades on market, each trade is included only once. Trades are sorted in reverse creation order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_trades___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GET__version_trades_my___format_": {
+            "main": "./lib/actions/GET__version_trades_my___format_.js",
+            "title": "Get your executed trades. Trades are sorted in reverse creation order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GET__version_trades_my___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

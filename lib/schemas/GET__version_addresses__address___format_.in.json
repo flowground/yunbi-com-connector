@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "address": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

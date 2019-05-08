@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "access_key": {
+                    "description": "Access key.",
+                    "type": "string"
+                },
+                "tonce": {
+                    "description": "Tonce is an integer represents the milliseconds elapsed since Unix epoch.",
+                    "type": "integer"
+                },
+                "signature": {
+                    "description": "The signature of your request payload, generated using your secret key.",
+                    "type": "string"
+                },
+                "side": {
+                    "description": "If present, only sell orders (asks) or buy orders (bids) will be canncelled.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "access_key"
+            ]
+        }
+    }
+}

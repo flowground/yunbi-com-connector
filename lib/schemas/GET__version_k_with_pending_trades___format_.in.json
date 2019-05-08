@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "market": {
+            "required": true,
+            "type": "string"
+        },
+        "trade_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "period": {
+            "required": false,
+            "type": "integer"
+        },
+        "timestamp": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

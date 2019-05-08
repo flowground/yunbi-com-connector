@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "access_key": {
+            "required": true,
+            "type": "string"
+        },
+        "tonce": {
+            "required": true,
+            "type": "integer"
+        },
+        "signature": {
+            "required": true,
+            "type": "string"
+        },
+        "market": {
+            "required": true,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "timestamp": {
+            "required": false,
+            "type": "integer"
+        },
+        "from": {
+            "required": false,
+            "type": "integer"
+        },
+        "to": {
+            "required": false,
+            "type": "integer"
+        },
+        "order_by": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

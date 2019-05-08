@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "market": {
+            "required": true,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "timestamp": {
+            "required": false,
+            "type": "integer"
+        },
+        "from": {
+            "required": false,
+            "type": "integer"
+        },
+        "to": {
+            "required": false,
+            "type": "integer"
+        },
+        "order_by": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "market": {
+            "required": true,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}
